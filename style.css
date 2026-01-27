@@ -1,0 +1,671 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden;  */
+}
+
+/* ----------------- NAV BAR ---------------  */
+
+.navbar {
+    background-color: #F7F2EE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.nlogos {
+    display: flex;
+    width: 15%;
+    gap: 20px;
+}
+
+.globe {
+    display: flex;
+    width: 40%;
+    gap: 1rem;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ----------------- LOGO ---------------  */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* menu icon */
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* show menu when checkbox is checked */
+#menu-toggle:checked~.mobile-menu {
+    display: block;
+}
+
+
+
+/* ----------------- SLIDING ---------------  */
+
+.scrollable {
+    display: flex;
+    margin: 1rem 1rem 5rem 1rem;
+    gap: 2rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.block {
+    flex: 0 0 250px;
+    text-align: center;
+}
+
+.block img {
+    width: 100%;
+}
+
+
+/* ----------------- MY TRAVEL ESSENTIALS ---------------  */
+
+.mytravelessentials {
+    text-align: center;
+    align-items: center;
+    background-color: #F7F2EE;
+    padding: 4rem;
+}
+
+.mytravelessentials h3 {
+    margin: 1rem;
+}
+
+.essentialphotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.essentialphotos img {
+    width: 12rem;
+    margin: 1rem;
+}
+
+
+/* --------------------- BACKPACKERS ---------------------- */
+
+.backpacker {
+    text-align: center;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.backpacker img {
+    width: 16rem;
+    /* object-fit: cover; */
+}
+
+/* ----------------- AROUND THE WORLD ---------------------- */
+
+.aroundtheworld {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* margin: 10rem; */
+    /* overflow: hidden;  */
+    /* border: 2px solid pink; */
+}
+
+.aroundtheworld h3 {
+    font-size: 2rem;
+}
+
+.aroundtheworldtext {
+    width: 50%;
+    /* padding: 5rem; */
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid green; */
+}
+
+.aroundtheworldimg {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid pink; */
+    min-height: 400px;
+    overflow: auto;
+
+}
+
+.img1 {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: 300px;
+    z-index: 1;
+}
+
+.img3 {
+    position: absolute;
+    top: 200px;
+    right: 250px;
+    width: 280px;
+    z-index: 2;
+}
+
+
+.img2 {
+    position: absolute;
+    top: 120px;
+    right: 400px;
+    width: 80px;
+    z-index: 3;
+}
+
+
+/* ----------------- BOOKS ----------------------------- */
+
+.books {
+    background-color: #F7F2EE;
+    display: flex;
+    background-image: url("https://bridge503.qodeinteractive.com/wp-content/uploads/2018/08/h4-slider-img-1.png");
+    background-size: 60% auto;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem 2rem 1rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+.back {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.book1 {
+    width: 100%;
+    max-width: 15rem;
+    transform: translateX(-100%);
+    transform-origin: left;
+    animation: left_to_right 1s ease forwards;
+}
+
+.book2 {
+    width: 100%;
+    max-width: 15rem;
+    transform: translateY(-100%);
+    transform-origin: top;
+    animation: top_to_bottom 1s ease forwards;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+
+@keyframes left_to_right {
+    to {
+        /* display: inline; */
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes top_to_bottom {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.inputs {
+    width: 60%;
+    text-align: center;
+    padding-top: 3rem;
+    opacity: 0;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.into,
+.button {
+    padding: 0.5rem;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 300px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes text {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------------------ CATEGORIES ------------------------ */
+
+.categories {
+    text-align: center;
+    margin: 5rem 1rem;
+}
+
+.destinations {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.destinations .gallery {
+    flex: 1 1 150px;
+}
+
+.gallery p {
+    font-size: 10px;
+    margin-top: auto;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+.gallery h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.gallery img {
+    margin-bottom: 1rem;
+}
+
+
+/* ------------------ SCROLL AGAIN ------------------------ */
+
+.againscroll {
+    display: flex;
+    margin: 5rem;
+    align-items: center;
+}
+
+.slide {
+    width: 50%;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slidetext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    padding: 1rem;
+}
+
+.againscroll p {
+    letter-spacing: 0.5rem;
+    color: #555;
+}
+
+.againscroll h3 {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+
+}
+
+
+/* ------------------------ BRANDS ------------------------------- */
+
+.sponsers {
+    margin: 10rem 0 10rem 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* ------------------------- FOOTER ------------------------------- */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background: white;
+    text-align: center;
+}
+
+.wherearewe,
+.social-section,
+.newsletter {
+    flex: 1;
+}
+
+/* WHERE ARE WE */
+.wherearewe p {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.wherearewe img {
+    max-width: 100%;
+}
+
+/* SOCIAL */
+.social-section h3 {
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-item ion-icon {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+}
+
+.social-item p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* NEWSLETTER */
+.newsletter h3 {
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.newsletter input {
+    padding: 1rem;
+    width: 100%;
+    max-width: 280px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.newsletter button {
+    padding: 1rem 2rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* ============================ */
+/* RESPONSIVE MEDIA QUERIES */
+/* ============================ */
+
+/* 1. Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .globe,
+    .nlogos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* AROUND THE WORLD */
+
+    .aroundtheworld {
+        margin: 2rem;
+    }
+
+    .aroundtheworldtext {
+        width: 70%;
+        padding: 2rem;
+        justify-content: center;
+        text-wrap: wrap;
+    }
+
+    .aroundtheworldimg {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aroundtheworldimg .img2 {
+        display: none;
+    }
+
+    .img1,
+    .img2,
+    .img3 {
+        position: static;
+        margin-bottom: 1rem;
+        transform: none;
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .aroundtheworldimg p {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .againscroll {
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    .slide,
+    .slidetext {
+        width: 100%;
+    }
+
+    .slide img {
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding: 4rem 2rem;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* 2. Mobile View (max-width: 768px) */
+@media screen and (max-width: 768px) {
+
+    /* Nav & Header */
+    .heading img {
+        width: 80%;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* hide ONLY top navbar links */
+    .nav-bar > a {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+
+
+    /* Travel Essentials */
+
+    .mytravelessentials {
+        padding: 2rem 1rem;
+    }
+
+    /* AROUND THE WORLD */
+
+    .aroundtheworld {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .aroundtheworldtext {
+        margin: 1rem;
+        padding: 1rem;
+        width: 50%;
+        align-self: center;
+        text-wrap: wrap;
+    }
+
+    .aroundtheworldimg {
+        margin-bottom: 3rem;
+    }
+
+    .aroundtheworld h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .aroundtheworldimg .img2 {
+        display: none;
+    }
+
+    /* Books Section */
+    .books {
+        flex-direction: column;
+        background-size: cover;
+        padding: 3rem 1rem;
+    }
+
+    .back {
+        width: 100%;
+        /* height: 200px;  */
+        margin-bottom: 2rem;
+    }
+
+    .inputs {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .inputs h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Footer Stack */
+    .footer {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Fix Text Sizes */
+    .againscroll h3 {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+
+    /* Categories */
+    .destinations .gallery {
+        flex: 1 1 100%;
+    }
+}
