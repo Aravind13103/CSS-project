@@ -390,13 +390,16 @@ a {
 /* ------------------------ BRANDS ------------------------------- */
 
 .sponsers {
-    margin: 10rem 0 10rem 0;
+    margin: 10rem 0 5rem 0;
     text-align: center;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     padding: 0 1rem;
+}
+.sponsers h2{
+    margin-bottom: 4rem;
 }
 
 /* ------------------------- FOOTER ------------------------------- */
